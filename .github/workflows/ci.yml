@@ -1,17 +1,11 @@
 name: CI
- 
+
 on:
   push:
     branches: ["main"]
-    paths:
-      - packages/**
-      - apps/web/**
   pull_request:
     types: [opened, synchronize]
-    paths:
-      - packages/**
-      - apps/web/**
- 
+
 jobs:
   build:
     name: Build and Test
@@ -21,25 +15,25 @@ jobs:
     # env:
     #  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
     #  TURBO_TEAM: ${{ vars.TURBO_TEAM }}
- 
+
     steps:
       - name: Check out code
         uses: actions/checkout@v4
         with:
           fetch-depth: 2
- 
+
       - uses: pnpm/action-setup@v3
         with:
           version: 8
- 
+
       - name: Setup Node.js environment
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'pnpm'
- 
+          cache: "pnpm"
+
       - name: Install dependencies
         run: pnpm install
- 
+
       - name: Build
-        run: pnpm build:web
+        run: pnpm build
