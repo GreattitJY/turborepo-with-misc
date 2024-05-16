@@ -46,8 +46,7 @@ const LINKS = [
   {
     title: "Deploy",
     href: "https://vercel.com/new",
-    description:
-      "Instantly deploy your Turborepo to a shareable URL with Vercel.",
+    description: "Instantly deploy your Turborepo to a shareable URL with Vercel.",
   },
 ];
 
@@ -56,7 +55,7 @@ export default function Page(): JSX.Element {
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
-          examples/basic&nbsp;
+          examples/basic&nbsp; changed
           <Code className={styles.code}>web</Code>
         </p>
         <div>
