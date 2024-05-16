@@ -136,8 +136,11 @@ importers:
 
   packages/tailwind-config:
     devDependencies:
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
       tailwindcss:
-        specifier: ^3.4.3
+        specifier: ^3.4.1
         version: 3.4.3
 
   packages/typescript-config: {}
