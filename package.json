@@ -3,12 +3,11 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
-    "build:docs": "turbo --filter docs build",
     "build:web": "turbo --filter web build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "start:docs": "pnpm --filter docs start"
+    "type-check": "turbo type-check",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
