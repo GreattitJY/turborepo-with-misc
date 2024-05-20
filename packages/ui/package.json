@@ -4,18 +4,16 @@
   "sideEffects": [
     "**/*.css"
   ],
+  "private": true,
   "exports": {
-    "./styles.css": "./dist/index.css",
+    "./globals.css": "./src/globals.css",
     "./shadcn/*": "./src/shadcn/*.tsx",
     "./button": "./src/button.tsx",
     "./lib/*": "./src/lib/*.ts"
   },
   "license": "MIT",
   "scripts": {
-    "build": "tailwindcss -i ./src/styles.css -o ./dist/index.css",
     "lint": "eslint src/",
-    "dev": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
-    "type-check": "tsc --noEmit",
     "ui:add": "pnpm dlx shadcn-ui@latest add"
   },
   "peerDependencies": {
